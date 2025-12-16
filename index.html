@@ -1,117 +1,136 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="utf-8">
-    <title>MikiHomePage</title>
-    <meta name="description" content="MikiHomePage">
-    <meta name="keywords" content="MikiHomePage">
-    <link rel="stylesheet" href="./css/index-c.css" type="text/css">
+    <title>jQuery slideViewerPro1.5</title>
+    <meta  charset="utf-8">
+    <link rel="stylesheet" href="svwp_style-x.css" type="text/css" media="screen" /> 
+    <script src="jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="jquery.slideViewerPro.1.5-x.js" type="text/javascript"></script>
+    <!-- Optional plugins  -->
+    <script src="jquery.timers.js" type="text/javascript"></script>
+    <!-- Syntax hl -->
+    <script src="jquery.syntax.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+    $(window).bind("load", function() {
+	 $("div#my-folio-of-works").slideViewerPro({
+	    thumbs: 7, 
+	    autoslide: true, 
+	    asTimer: 5000, 
+	    typo: true,
+	    galBorderWidth: 0,
+<!--		thumbsBorderOpacity: 0, -->
+		thumbsBorderOpacity: 1.0, 
+		buttonsTextColor: "#707070",
+		buttonsWidth: 40,
+<!--		thumbsActiveBorderOpacity: 0.8, -->
+		thumbsActiveBorderOpacity: 1.0,
+<!--		thumbsActiveBorderColor: "aqua", -->
+		thumbsActiveBorderColor: "#99003d",
+<!--		shuffle: true, -->
+		shuffle: false,
+		});
+	$("div#basic").slideViewerPro();
+	$("div#fewoptions").slideViewerPro({
+		thumbs: 3,
+		thumbsPercentReduction: 20,
+		galBorderWidth: 0,
+		galBorderColor: "aqua",
+		thumbsTopMargin: 10,
+		thumbsRightMargin: 10,
+		thumbsBorderWidth: 5,
+		thumbsActiveBorderColor: "gold",
+		thumbsActiveBorderOpacity: 0.8,
+		thumbsBorderOpacity: 0,
+		buttonsTextColor: "#707070",
+		leftButtonInner: "<img src='larw.gif' />",
+		rightButtonInner: "<img src='rarw.gif' />",
+		autoslide: true, 
+		typo: true,
+		});	
+	$("div#noui").slideViewerPro({
+		galBorderWidth: 0,
+		autoslide: true, 
+		thumbsVis: false,
+		shuffle: true,
+		});	
+	$("div#flickit").slideViewerPro({
+		autoslide: true, 
+		shuffle: true,
+		asTimer: 3500, 
+		thumbsActiveBorderColor: "silver",
+		buttonsTextColor: "silver",
+		typo: true,
+		galBorderWidth: 0,
+		thumbsBorderOpacity: 0 
+		});	
+		});
+
+$(function(){
+	/**
+	I've seen many slideViewerPro users adding these lines too.
+	They're only needed to highlight the syntax within this page,
+	it's NOT part of the slideViewerPro plugin!
+	*/
+});
+</script>
 </head>
 
 <body>
  <header>
-    <img src="img/home.gif" alt="ホームぺージロゴ">
+  <hgroup>
+    <h1>2012年 牡丹成長記録（slideViewerPro1.5）</h1>
+  </hgroup>
  </header>
 
- <nav>
-   <h1>サイトナビゲーション</h1>
-    <ul class="ul-a">
-     <li><a href="sub/mikislide.html">■美希ｽﾗｲﾄﾞ（galleriffic）■</a></li>
-     <li><a href="sub/kousuke.html">■結婚式1■</a></li>
-     <li><a href="sub/mao.html">■結婚式2■</a></li>    </ul>
-    <ul class="ul-a">
-     <li><a href="sub/sotsugyoushiki-a.html">■卒業式■</a></li>
-     <li><a href="sub/ws-slideshow-b.html">■ws-slideshow2■</a></li>
-     <li><a href="sub/mikimap-c.html">■地図検索（google map）■</a></li>
-     <li><a href="sub/tab-z.html">■実装説明■</a></li>
-    </ul>
-    <ul class="ul-a">
-     <li>light box → <a href="sub/colorbox-1-2.html">■colorbox-1■</a></li>
-     <li><a href="sub/colorbox-3-1.html">■colorbox-3■</a></li>
-     <li><a href="sub/colorbox-5-1.html">■colorbox-5■</a></li>
-     <li><a href="sub/prettyphoto3.1.4-2.html">■prettyphoto■</a></li>
-    </ul>
-    <ul class="ul-a">
-     <li>slide show → <a href="sub/slideat-c.html">■自動■</a></li>
-     <li><a href="sub/photoslider-c.html">■Photo Slider■</a></li>
-     <li><a href="sub/pikachoose-c.html">■PikaChoose■</a></li>
-    </ul>
-    <ul class="ul-a">
-     <li>slide show → <a href="sub/adgallery-a.html">■AD Gallery■</a></li>
-     <li><a href="sub/galleriaclassic.html">■Galleria■</a></li>
-     <li><a href="sub/galleryview-a.html">■GalleryView■</a></li>
-     <li><a href="sub/smart-gallery.html">■Smart Gallery■</a></li>
-    </ul>
-    <ul class="ul-a">
-     <li>slide show → <a href="sub/slideViewerPro1.5-b.html">■slideViewerPro1.5■</a></li>
-     <li><a href="sub/parade.html">■slideViewerPro1.5（ELECTRICAL PARADE）■</a></li>
-     <li><a href="sub/exposure-demo4.html">■Exposure■</a></li>
-    </ul>
-    <ul class="ul-a">
-     <li><a href="sub/slideViewerPro1.5-2025.html">■slideViewerPro1.5（2025 庭の花）■</a></li>
-    </ul>
- </nav>
+<div id="wrapp">
 
- <article>
-  <section>
-      <h1>このサイトについて</h1>
-      <p>主に娘の成長記録を掲載しています。<br>
-         庭で育てている牡丹の画像を掲載しています。light box・slide showの牡丹画像（2012年）は全て同じものです。<br>
-         colorbox-1、slideViewerPro1.5に牡丹画像（2015年）を追加しました。
-      </p>
-      <p>ws-slideshow2はflashを使用しています。複数ﾌｫﾙﾀﾞ・ﾌﾙｽｸﾘｰﾝ等高機能なので実装してみました。<br>
-         ws-slideshow2は、flashを実装しているブラウザ：Maxthon Nitro等でないと閲覧出来ません。
-      </p>
-      </p>
-      <p>数年ぶりの更新です。園芸を徐々に再開しました。<br>
-      </p>
-  </section>
-  <section>
-      <h1>その他の記事</h1>
-      <p>このホームページは久しぶりの更新です。<br>
-         ＨＴＭＬ５＋ＣＳＳ３＋ＪａｖａＳｃｒｉｐｔで作成しました。<br>
-         最新のｳｪﾌﾞﾌﾞﾗｳｻﾞｰで閲覧して下さい。<br>
-         美希ｽﾗｲﾄﾞはmignon.arrow.jpを参考にgallerifficで作成しました。<br>
-         簡単ｽﾗｲﾄﾞはallabout.co.jpを参考に作成しました。開始をｸﾘｯｸすると画像の下に名前と番号が表示されるように追加しました。<br>
-         最初は簡単なｽﾗｲﾄﾞｼｮｰを作成しましたが、ｻﾑﾈｲﾙがある方がﾎｰﾑﾍﾟｰｼﾞの見栄えは格段に向上します。<br>
-         PhotoSliderはASCII.JP WEB'PROFESSIONALを参考に作成しました。<br>
-      </p>
-      <p>W3C Markup Validation ServiceでHTML5を検証しました。<br>
-         W3C CSS Validation ServiceでCSS3を検証しました。<br>
-         検証すると思わぬｺｰﾄﾞﾐｽ・重複がみつかります。<br>
-      </p>
-  </section>
- </article>
+  <div id="my-folio-of-works" class="svwp">
+    <ul>
+      <li><img alt="#1/40 庭の牡丹 Date：2012/03/25" src="p2012-1.jpg" ></li>
+      <li><img alt="#2/40 庭の牡丹 Date：2012/04/28" src="p2012-2.jpg" /></li>
+      <li><img alt="#3/40 白王獅子 Date：2012/04/28 八重、大輪、中咲き、純白、丸弁" src="p2012-3.jpg" ></li>
+      <li><img alt="#4/40 白王獅子 Date：2012/04/28" src="p2012-4.jpg" ></li>
+      <li><img alt="#5/40 白王獅子 Date：2012/04/28" src="p2012-5.jpg" ></li>
+      <li><img alt="#6/40 写楽 Date：2012/04/30 万重、大輪、中～遅咲き、青紫、美花、稀少品種" src="p2012-6.jpg" /></li>
+      <li><img alt="#7/40 写楽 Date：2012/04/30 1つめは巨大輪でしたが、雨で相当傷みました" src="p2012-7.jpg" ></li>
+      <li><img alt="#8/40 写楽 Date：2012/04/30 これは2つめの開花ですが、大輪です" src="p2012-8.jpg" ></li>
+      <li><img alt="#9/40 写楽 Date：2012/04/30" src="p2012-9.jpg" /></li>
+      <li><img alt="#10/40 島大臣 Date：2012/04/28 千重、大輪、中咲き、紫の代表品種" src="p2012-10.jpg" ></li>
+      <li><img alt="#11/40 島大臣 Date：2012/04/28 今までで、一番良い形に開花しました" src="p2012-11.jpg" ></li>
+      <li><img alt="#12/40 島大臣 Date：2012/04/28" src="p2012-12.jpg" ></li>
+      <li><img alt="#13/40 花競 Date：2012/04/28 千重、大輪、中咲き、桃色の代表品種" src="p2012-13.jpg" ></li>
+      <li><img alt="#14/40 花競 Date：2012/04/28" src="p2012-14.jpg" ></li>
+      <li><img alt="#15/40 花競 Date：2012/04/28" src="p2012-15.jpg" ></li>
+      <li><img alt="#16/40 御国の曙 Date：2012/04/30 独特の形で、結構目立ちます" src="p2012-16.jpg" ></li>
+      <li><img alt="#17/40 御国の曙 Date：2012/04/30" src="p2012-17.jpg" ></li>
+      <li><img alt="#18/40 御国の曙 Date：2012/04/30" src="p2012-18.jpg" ></li>
+      <li><img alt="#19/40 八千代椿 Date：2012/04/30 八重、中輪、中～遅咲き、桃色の人気品種" src="p2012-19.jpg" ></li>
+      <li><img alt="#20/40 八千代椿 Date：2012/04/30" src="p2012-20.jpg" ></li>
+      <li><img alt="#21/40 八千代椿 Date：2012/04/30" src="p2012-21.jpg" ></li>
+      <li><img alt="#22/40 庭の牡丹 Date：2012/05/01 島大臣、花王、島根長寿楽、花競、御国の曙、写楽、黄冠" src="p2012-22.jpg" ></li>
+      <li><img alt="#23/40 太陽 Date：2012/05/01 千重、中輪、早咲き、真赤、芳紀と並ぶ代表品種" src="p2012-23.jpg" ></li>
+      <li><img alt="#24/40 太陽 Date：2012/05/01" src="p2012-24.jpg" ></li>
+      <li><img alt="#25/40 太陽 Date：2012/05/01" src="p2012-25.jpg" ></li>
+      <li><img alt="#26/40 島根長寿楽 Date：2012/05/01 八重、中輪、遅咲き、花弁基部の濃い斑紋が特徴です" src="p2012-26.jpg" ></li>
+      <li><img alt="#27/40 島根長寿楽 Date：2012/05/01" src="p2012-27.jpg" ></li>
+      <li><img alt="#28/40 島根長寿楽 Date：2012/05/01" src="p2012-28.jpg" ></li>
+      <li><img alt="#29/40 花王 Date：2012/05/01 万重、大輪、遅咲き、紅色、盛り上がり咲き、お気に入りの牡丹です" src="p2012-29.jpg" ></li>
+      <li><img alt="#30/40 花王 Date：2012/05/01" src="p2012-30.jpg" ></li>
+      <li><img alt="#31/40 花王 Date：2012/05/01" src="p2012-31.jpg" ></li>
+      <li><img alt="#32/40 花王全景 Date：2012/05/02" src="p2012-32.jpg" ></li>
+      <li><img alt="#33/40 黄冠 Date：2012/05/01 千重、大輪、中咲き、黄色の稀少品種" src="p2012-33.jpg" ></li>
+      <li><img alt="#34/40 黄冠 Date：2012/05/01" src="p2012-34.jpg" ></li>
+      <li><img alt="#35/40 黄冠 Date：2012/05/01" src="p2012-35.jpg" ></li>
+      <li><img alt="#36/40 黄冠 Date：2012/05/02" src="p2012-36.jpg" ></li>
+      <li><img alt="#37/40 満天紅 Date：2012/05/02 八重、大輪、中～遅咲き、濃紅色、太陽より赤く、新品種です" src="p2012-37.jpg" ></li>
+      <li><img alt="#38/40 満天紅 Date：2012/05/02" src="p2012-38.jpg" ></li>
+      <li><img alt="#39/40 満天紅 Date：2012/05/05" src="p2012-39.jpg" ></li>
+      <li><img alt="#40/40 庭の牡丹 Date：2012/05/02" src="p2012-40.jpg" ></li>
+     
+    </ul>
+  </div>
+</div>
 
- <aside>
-  <section>
-     <h1>おすすめサイトの紹介</h1>
-     <ul>
-      <li><a href="http://www.tohoho-web.com/www.htm">とほほのＷＷＷ入門</a></li>
-      <li><a href="http://www.htmq.com/">ＨＴＭＬｸｲｯｸﾘﾌｧﾚﾝｽ</a></li>
-      <li><a href="http://www2.biglobe.ne.jp/~sota/">Sota</a></li>
-      <li><a href="http://www.mahoutsukaino.com/">魔法使いの開発工房</a></li>
-     </ul><br>
-     <ul>
-      <li><a href="http://mignon.arrow.jp/blog/jquery/1396/">mignon.arrow.jp</a></li>
-      <li><a href="http://allabout.co.jp/gm/gc/23931/">allabout.co.jp</a></li>
-     <li><a href="http://ascii.jp/elem/000/000/187/187279/">WEB'PROFESSIONAL</a></li>
-      <li><a href="http://www.skuare.net/test/jpikachoose.html">skuare.net</a></li>
-     </ul><br>
-     <ul>
-      <li><a href="http://validator.w3.org/">W3C Markup Validation S</a></li>
-      <li><a href="http://jigsaw.w3.org/css-validator/#validate_by_uri+with_options">W3C CSS Validation S</a></li>
-     </ul>
-  </section>
- </aside>
-
-    <span id="calenArea"></span>
-    <script type="text/javascript" src="./js/calendar-link.js"></script>
-
- <footer>
-      <script type="text/javascript" src="./js/lastupdate.js"></script>
-      <p>Copyright(c) 2002 All right reserved.
-      </p>
- </footer>
 </body>
 </html>
